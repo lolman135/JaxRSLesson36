@@ -19,5 +19,5 @@ public interface UserService extends BaseService<User, UserDtoRequest> {
     boolean deleteById(Long id);
 
     List<User> fetchByFirstName(String firstName);
-    List<User> fetchByLstName(String lastName);
+    List<User> fetchByLastName(String lastName);
 }

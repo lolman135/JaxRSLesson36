@@ -101,4 +101,32 @@ public class UserController {
                     .build();
         }
     }
+
+    @GET
+    @Path("fetchByFirstName/{firstName: [a-zA-Z]*}")
+    public Response fetchUsersByFirstName(@PathParam("firstName") final String firstName){
+        List<User> users = userService.fetchByFirstName(firstName);
+        if (users != null && !users.isEmpty()){
+            return Response.ok(users).build();
+        } else{
+            return Response
+                    .status(Response.Status.NO_CONTENT)
+                    .entity("No users found")
+                    .build();
+        }
+    }
+
+    @GET
+    @Path("fetchByLastName/{lastName: [a-zA-Z]*}")
+    public Response fetchUsersByжName(@PathParam("lastName") final String lastName){
+        List<User> users = userService.fetchByLastName(lastName);
+        if (users != null && !users.isEmpty()){
+            return Response.ok(users).build();
+        } else{
+            return Response
+                    .status(Response.Status.NO_CONTENT)
+                    .entity("No users found")
+                    .build();
+        }
+    }
 }

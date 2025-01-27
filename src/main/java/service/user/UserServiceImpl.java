@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> fetchByLstName(String lastName) {
+    public List<User> fetchByLastName(String lastName) {
         return userRepository.fetchByLastName(lastName);
     }
 }
