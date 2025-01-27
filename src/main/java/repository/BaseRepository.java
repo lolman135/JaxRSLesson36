@@ -5,7 +5,7 @@ import java.util.Optional;
 
 public interface BaseRepository<T, S> {
 
-    void save (S request);
+    void save(S request);
 
     Optional<List<T>> getAll();
 

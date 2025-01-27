@@ -2,13 +2,15 @@ package service.user;
 
 import dto.user.request.UserDtoRequest;
 import entity.User;
+import jakarta.inject.Inject;
 import repository.user.UserRepository;
 
 import java.util.List;
 import java.util.Objects;
 
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
+    @Inject
     private UserRepository userRepository;
 
     @Override
@@ -45,7 +47,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public List<User> fetchByLastName(String lastName) {
+    public List<User> fetchByLstName(String lastName) {
         return List.of();
     }
 }

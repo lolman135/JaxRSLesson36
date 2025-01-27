@@ -3,8 +3,6 @@ package repository.user;
 import dto.user.request.UserDtoRequest;
 import entity.User;
 import repository.BaseRepository;
-import service.BaseService;
-import service.user.UserService;
 
 import java.util.List;
 import java.util.Optional;

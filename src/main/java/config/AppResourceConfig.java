@@ -1,6 +1,5 @@
 package config;
 
-import controller.ProductController;
 import controller.UserController;
 import jakarta.ws.rs.ApplicationPath;
 import org.glassfish.jersey.server.ResourceConfig;

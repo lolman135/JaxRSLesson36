@@ -10,7 +10,6 @@ import repository.user.UserRepositoryImpl;
 import service.user.UserService;
 import service.user.UserServiceImpl;
 
-
 public class ApplicationBinder implements Feature {
     @Override
     public boolean configure(FeatureContext context) {

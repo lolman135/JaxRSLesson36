@@ -9,14 +9,13 @@ import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 import java.util.logging.Logger;
+
 public class HibernateConfig {
 
     private static final Logger LOGGER = Logger.getLogger(HibernateConfig.class.getName());
     private static SessionFactory sessionFactory;
-
 
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {

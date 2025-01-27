@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface UserService extends BaseService<User, UserDtoRequest> {
 
-    User create (UserDtoRequest request);
+    User create(UserDtoRequest request);
 
     List<User> getAll();
 
@@ -18,6 +18,6 @@ public interface UserService extends BaseService<User, UserDtoRequest> {
 
     boolean deleteById(Long id);
 
-    List<User> fetchByFirstName (String firstName);
-    List<User> fetchByLastName (String lastName);
+    List<User> fetchByFirstName(String firstName);
+    List<User> fetchByLstName(String lastName);
 }

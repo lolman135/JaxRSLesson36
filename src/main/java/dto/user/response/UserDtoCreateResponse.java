@@ -10,8 +10,8 @@ public record UserDtoCreateResponse(
         String message,
         User user) {
 
-    private static final String SUCCESS_MESSAGE = "User has been created successfully!";
-    private static final String FAILURE_MESSAGE = "User has not created";
+    public static final String SUCCESS_MESSAGE = "User has been created successfully!";
+    public static final String FAILURE_MESSAGE = "User has not been created!";
 
     public static UserDtoCreateResponse of(boolean isUserCreated, User user) {
         if (isUserCreated) {
