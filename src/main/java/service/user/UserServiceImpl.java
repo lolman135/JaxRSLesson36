@@ -23,31 +23,31 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> getAll() {
-        return List.of();
+        return userRepository.getAll().orElse(null);
     }
 
     @Override
     public User getById(Long id) {
-        return null;
+        return userRepository.getById(id).orElse(null);
     }
 
     @Override
     public User update(Long id, UserDtoRequest request) {
-        return null;
+        return userRepository.update(id, request);
     }
 
     @Override
     public boolean deleteById(Long id) {
-        return false;
+        return userRepository.deleteById(id);
     }
 
     @Override
     public List<User> fetchByFirstName(String firstName) {
-        return List.of();
+        return userRepository.fetchByFirstName(firstName);
     }
 
     @Override
     public List<User> fetchByLstName(String lastName) {
-        return List.of();
+        return userRepository.fetchByLastName(lastName);
     }
 }
