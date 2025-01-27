@@ -63,6 +63,11 @@ public class UserRepositoryImpl implements UserRepository {
         try (Session session = HibernateConfig.getSessionFactory().openSession()){
             transaction = session.beginTransaction();
             User user = session.get(User.class, id);
+
+            if (user == null){
+                transaction.rollback();
+                return Optional.empty();
+            }
             transaction.commit();
             return Optional.of(user);
 
